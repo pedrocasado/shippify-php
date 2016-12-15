@@ -88,8 +88,8 @@ class Shippify
         }
         if (!isset($args['http_header'])) {
             $http_header = array(
-                'Accept: application/vnd.api+json',
-                'Content-Type: application/vnd.api+json'
+                // 'Accept: application/vnd.api+json',
+                'Content-Type: application/json; charset=utf-8'
             );
         } else {
             $http_header = $args['http_header'];
