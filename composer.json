@@ -1,0 +1,22 @@
+{
+  "name": "pedrocasado/shippify-php",
+  "minimum-stability": "dev",
+  "description": "This library allows you to quickly use Shippify API with PHP.",
+  "version": "1.0.0",
+  "homepage": "http://github.com/pedrocasado/shippify-php",
+  "license": "MIT",
+  "keywords": ["Shippify", "shipping"],
+  
+  "require": {
+    "php": ">=5.6"
+  },
+  
+  "replace": {
+    "pedrocasado/shippify-php": "*"
+  },
+
+  "type": "library",
+  "autoload": {
+    "files": ["lib/Shippify.php"]
+  }
+}

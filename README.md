@@ -1,0 +1,1 @@
+This library allows you to quickly use Shippify API with PHP
