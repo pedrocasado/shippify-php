@@ -1,21 +1,21 @@
 This library allows you to quickly use Shippify API with PHP
 
-Install
+# Install
 
     composer require pedrocasado/shippify-php
 
-Usage
+# Usage
     
-- Create Shippify object
+## Create Shippify object
 
     $shippify = new \Shippify("api_key", "api_secret");
 
-- List warehousrs
+## List warehousrs
 
     $response = $shippify->get("/warehouse/list");
     var_dump($response);
 
-- Create new Task
+## Create new Task
 
     $args['task']['products'] = array(
         [
