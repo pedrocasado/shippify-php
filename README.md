@@ -6,12 +6,17 @@ Install
 
 Usage
     
-    // list warehouses
+- Create Shippify object
+
     $shippify = new \Shippify("api_key", "api_secret");
+
+- List warehousrs
+
     $response = $shippify->get("/warehouse/list");
     var_dump($response);
 
-    // create new task
+- Create new Task
+
     $args['task']['products'] = array(
         [
             'id' => '11',
