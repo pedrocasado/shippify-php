@@ -131,8 +131,8 @@ class Shippify
                 break;
 
             case 'get':
-                $query = http_build_query($args);
-                curl_setopt($ch, CURLOPT_URL, $url . '?' . $query);
+                $query = json_encode($args);
+                curl_setopt($ch, CURLOPT_URL, $url . '?data=' . $query);
                 break;
 
             case 'delete':
