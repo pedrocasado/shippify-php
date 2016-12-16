@@ -49,4 +49,24 @@ This library allows you to quickly use Shippify API with PHP
     $response = $shippify->post("/task/new", $args);
     var_dump($response);
 
+## Get fare
+
+    $args = array();
+    $args[0]['pickup_location']['lat'] = -22.90282300;
+    $args[0]['pickup_location']['lng'] = -43.10265000;
+    $args[0]['delivery_location']['lat'] = -22.967021;
+    $args[0]['delivery_location']['lng'] = -43.180609;
+    $args[0]['items'] = array(
+        [
+            'id' => '22323',
+            'name' => 'Product Name',
+            'price' => 20,
+            'size' => 3,
+            'qty' => 1
+        ]
+    );
+
+    $response = $shippify->get("/task/fare", $args);
+    var_dump($response);
+
 Api documentation: [https://docs.logistics.shippify.co](https://docs.logistics.shippify.co)
