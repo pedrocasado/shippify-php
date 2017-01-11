@@ -132,7 +132,10 @@ class Shippify
 
             case 'get':
                 $query = json_encode($args);
-                curl_setopt($ch, CURLOPT_URL, $url . '?data=' . $query);
+                // curl_setopt($ch, CURLOPT_URL, $url . '?data=' . $query);
+
+                // encode url to prevent bad gateway error
+                curl_setopt($ch, CURLOPT_URL, $url . '?data=' . urlencode($query));
                 break;
 
             case 'delete':
