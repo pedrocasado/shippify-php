@@ -158,7 +158,7 @@ class Shippify
 
         if ($response['headers']['http_code'] != 200)
         {
-            throw new \Exception('Something is wrong. Request header: '.$response['headers']['request_header'], 1);
+            throw new \Exception('Something is wrong. Request header: '.$response['headers']['request_header'].' Complete response: '.json_encode($response), 1);
         }
 
         if (isset($response['headers']['request_header'])) {
